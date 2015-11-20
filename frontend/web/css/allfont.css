@@ -1,0 +1,12 @@
+/*****************************
+ All rights reserved.
+ AllFont.net (c) 2011-2015
+ *****************************/
+@font-face {
+    font-family: 'Futura Condensed Plain:001.004';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Futura Condensed Plain:001.004'), local('FuturaCondensed-Plain'),
+    url(http://allfont.net/cache/fonts/futura-condensed-plain001004_078e241f3d632e95cca95e935491f983.woff) format('woff'),
+    url(http://allfont.net/cache/fonts/futura-condensed-plain001004_078e241f3d632e95cca95e935491f983.ttf) format('truetype');
+}

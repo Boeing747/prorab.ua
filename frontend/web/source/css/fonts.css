@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Futura Condensed";
+    url("/fonts/futura-condensed-plain") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Open Sans Bold";
+    url("/fonts/OpenSans-Bold") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    url("/fonts/OpenSans-Regular") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
