@@ -1,24 +1,26 @@
+<?
+    use yii\helpers\Html;
+    use yii\bootstrap\Nav;
+
+    \frontend\assets\MainAsset::register($this);
+    $this->beginPage();
+?>
 <!DOCTYPE html>
-<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
-<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="ru">
-<!--<![endif]-->
+
+<html lang="<?= Yii::$app->language ?>">
+
 <head>
-    <meta charset="utf-8" />
     <title>Заголовок</title>
+    <meta charset="<?= Yii::$app->charset;?>" />
     <meta name="description" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    <?= Html::csrfMetaTags();  ?>
 
-    <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/glyphicon.css" />
-    <link rel="stylesheet" href="/css/add.css" />
-    <link href="http://allfont.ru/allfont.css?fonts=futura-condensed-plain001004" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/js/jquery.js"></script>
+    <? $this->head(); ?>
 </head>
 <body>
+<? $this->beginBody(); ?>
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="collapse navbar-collapse">
@@ -246,5 +248,8 @@
 
     </div>
 </div>
+<? $this->endBody(); ?>
 </body>
 </html>
+
+<? $this->endPage(); ?>
