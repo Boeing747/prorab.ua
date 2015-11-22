@@ -10,44 +10,16 @@
 <html lang="<?= Yii::$app->language ?>">
 
 <head>
-    <title>Заголовок</title>
+    <title><?=$this->title;?></title>
     <meta charset="<?= Yii::$app->charset;?>" />
     <meta name="description" content="" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
     <?= Html::csrfMetaTags();  ?>
-
     <? $this->head(); ?>
 </head>
 <body>
 <? $this->beginBody(); ?>
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav pull-right">
-                <li><a  href="#"><span class=" glyphicon glyphicon-circle-arrow-right"></span>Вход</a></li>
-                <li><a href="#about"><span class="glyphicon glyphicon-ok-circle"></span>Регистрация</a></li>
-                <li><a href="#contact"><span class="glyphicon glyphicon-question-sign"></span>Как это работает</a></li>
-                <li class="glyphicon glyphicon-search"></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div class="main">
-    <div class="container">
-        <div class="row logo-row">
-            <div class="col-xs-3 logo-pic" >
-                <img src="/img/logo.png" />
-            </div>
-            <div class="col-xs-9">
-                <ul class="pull-right   sec-menu">
-                    <li>База прорабов</li>
-                    <li>Отзывы</li>
-                    <li>Интервью на Youtube</li>
-                    <li>Это интересно</li>
-                </ul>
-            </div>
-        </div>
+<?=$this->render('//common/header');?>
         <div clas="row" class="main-text-block">
             <div class="col-xs-6" >
                 <img class="main-text-pic" src="/img/casca_transp.png" />
@@ -193,61 +165,7 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="container">
-            <div class="row logo-row" >
-                <div class="col-xs-3">
-                    <div class="footer-title">Як використовувати сервіс?</div>
-                    <div class="footer-links">
-                        <ul class="list-unstyled footer-list">
-                            <li><a href="">Як це працює?</a></li>
-                            <li><a href="">Відповідальність</a></li>
-                            <li><a href="">Досвід</a></li>
-                            <li><a href="">Відгуки</a></li>
-                            <li><a href="">Питання-Відповідь</a></li>
-                            <li><a href="">Зв’язатись з нами</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-3">
-                    <div class="footer-title">Про сервіс</div>
-                    <div class="footer-links">
-                        <ul class="list-unstyled footer-list">
-                            <li><a href="">Про нас</a></li>
-                            <li><a href="">Договір про використаня</a></li>
-                            <li><a href="">Кодекс</a></li>
-                            <li><a href="">Конфіденційність</a></li>
-                            <li><a href="">Виконробам</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-3">
-                    <div class="footer-title">Важливі поради</div>
-                    <div class="footer-links">
-                        <ul class="list-unstyled footer-list">
-                            <ul class="list-unstyled footer-list">
-                                <li><a href="">Як побудувати дім вланоруч?</a></li>
-                                <li><a href="">Як заощадити на матеріалах?</a></li>
-                                <li><a href="">Як застрахуватись від шахраїв?</a></li>
-                                <li><a href="">Коли починати будівництво?</a></li>
-                                <li><a href="">Каркасний будинок - найкращій вибір.</a></li>
-                            </ul>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xs-3 text-center">
-                    <div class="footer-title">Ми в соцмережах</div>
-                    <div class="footer-links">
-                        <ul class="list-unstyled footer-list">
-
-                        </ul>
-                    </div>
-                </div>
-            </div></div>
-
-    </div>
-</div>
+    <?=$this->render('//common/footer');?>
 <? $this->endBody(); ?>
 </body>
 </html>
