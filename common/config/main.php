@@ -6,8 +6,8 @@ return [
 
 
     'modules' => [
-        'main' => [
-            'class' => 'app\modules\main\Module',
+        'catalog' => [
+            'class' => 'app\modules\catalog\Module',
         ],
         'test' => [
             'class' => 'app\modules\test\Module',
@@ -33,6 +33,7 @@ return [
             'showScriptName' => false,
             'rules' => [ '' => 'site/index',
                 'signup' => '/site/signup',
+
                 //'module/<module:\w+>/<controller:\w+>/<action:\w+>' => '<module>/<controller>/<action>',
                 '<controller:\w+>/<id:\d+>'=>'<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',

@@ -14,6 +14,8 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use frontend\models\CsvChecker;
+use yii\data\Pagination;
+use yii\db\Query;
 
 /**
  * Site controller
@@ -25,6 +27,13 @@ class SiteController extends Controller
      */
 
     public $layout = 'bootstrap';
+
+
+    public static function getUsersObj()
+    {
+        $obj = new Users();
+        return $obj;
+    }
 
     public function behaviors()
     {
@@ -80,7 +89,6 @@ class SiteController extends Controller
         {
             $csv->toDb($res);
         }
-
     }
 
     /**
@@ -90,12 +98,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        
-        $users = new Users();
+        $users = self::getUsersObj();
         $usersCount  = $users->getSiteUsers();
-
         return $this->render('index', ['usersCount' => $usersCount]);
     }
+
+
 
     /**
      * Logs in a user.
