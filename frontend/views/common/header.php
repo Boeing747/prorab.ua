@@ -2,9 +2,9 @@
     <div class="container">
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav pull-right">
-                <li><a  href="#"><span class=" glyphicon glyphicon-circle-arrow-right"></span>Вход</a></li>
-                <li><a href="#about"><span class="glyphicon glyphicon-ok-circle"></span>Регистрация</a></li>
-                <li><a href="#contact"><span class="glyphicon glyphicon-question-sign"></span>Как это работает</a></li>
+                <li><a  href="/auth"><span class=" glyphicon glyphicon-circle-arrow-right"></span>Вход</a></li>
+                <li><a href="/registration"><span class="glyphicon glyphicon-ok-circle"></span>Регистрация</a></li>
+                <li><a href="/contact"><span class="glyphicon glyphicon-question-sign"></span>Как это работает</a></li>
                 <li class="glyphicon glyphicon-search"></li>
             </ul>
         </div>

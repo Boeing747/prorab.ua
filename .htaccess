@@ -5,6 +5,7 @@
 
 <IfModule mod_rewrite.c>
     RewriteRule ^img/(.+)$ img/$1 [L]
+    RewriteRule ^csv/(.+)$ img/$1 [L]
 
     # deal with admin first
     RewriteCond %{REQUEST_URI} ^/(admin)

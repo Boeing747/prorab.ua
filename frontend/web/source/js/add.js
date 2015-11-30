@@ -44,3 +44,10 @@ $(document).on('click', '.open-block', function(){
         $(hideBlock).hide();
         $(showBlock).show();
 });
+
+$(document).on('click', '.js_url', function(){
+
+    var url = $(this).attr('data-item');
+    window.location.href = url;
+
+});

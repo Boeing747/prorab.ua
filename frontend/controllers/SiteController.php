@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use frontend\models\Users;
 use Yii;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
@@ -12,6 +13,7 @@ use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use frontend\models\CsvChecker;
 
 /**
  * Site controller
@@ -21,6 +23,9 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
+
+    public $layout = 'bootstrap';
+
     public function behaviors()
     {
         return [
@@ -65,6 +70,19 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionCsv()
+    {
+        $csvFile = $_SERVER['DOCUMENT_ROOT'] . '/csv/users_new.csv';
+        $csv = new CsvChecker();
+        $res = $csv->getCsv($csvFile);
+
+        if($res)
+        {
+            $csv->toDb($res);
+        }
+
+    }
+
     /**
      * Displays homepage.
      *
@@ -72,7 +90,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        
+        $users = new Users();
+        $usersCount  = $users->getSiteUsers();
+
+        return $this->render('index', ['usersCount' => $usersCount]);
     }
 
     /**
